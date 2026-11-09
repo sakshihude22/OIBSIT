@@ -1,10 +1,13 @@
-# Sentiment Analysis on IMDb Movie Reviews
+# Sales Prediction Using Python
 
 ## Project Overview
-This project uses Natural Language Processing (NLP) and Machine Learning to classify movie reviews as Positive or Negative.
+This project predicts product sales based on advertising budgets spent on TV, Radio, and Newspaper using Machine Learning.
 
-## Objective
-To analyze movie reviews and identify their sentiment using Python and Machine Learning.
+## Dataset
+- Dataset: Advertising.csv
+- Total Records: 200
+- Features: TV, Radio, Newspaper
+- Target: Sales
 
 ## Technologies Used
 - Python
@@ -14,29 +17,28 @@ To analyze movie reviews and identify their sentiment using Python and Machine L
 - Seaborn
 - Scikit-learn
 - Jupyter Notebook
-- TF-IDF
-- Logistic Regression
 
-## Dataset
-IMDb Movie Reviews Dataset
-- Total Reviews: 50,000
-- Positive Reviews: 25,000
-- Negative Reviews: 25,000
-
-## Project Workflow
-1. Data loading and exploration
-2. Missing value and duplicate checking
-3. Duplicate removal
-4. Text preprocessing
-5. TF-IDF vectorization
-6. Train-test splitting
-7. Logistic Regression model training
-8. Model evaluation
-9. Sentiment prediction
+## Machine Learning Models
+1. Linear Regression
+2. Random Forest Regressor
 
 ## Model Performance
-- Algorithm: Logistic Regression
-- Accuracy: 89.09%
+
+| Metric | Linear Regression | Random Forest |
+|---|---:|---:|
+| MAE | 1.46 | 0.62 |
+| RMSE | 1.78 | 0.77 |
+| R² Score | 89.94% | 98.13% |
+
+## Feature Importance
+- TV: 62.48%
+- Radio: 36.22%
+- Newspaper: 1.30%
 
 ## Conclusion
-The model successfully classifies movie reviews into Positive and Negative sentiments with 89.09% accuracy.
+Random Forest Regressor performed better than Linear Regression, achieving an R² score of 98.13%. TV advertising was the most influential feature in predicting sales.
+
+## Project Files
+- Sales_Prediction.ipynb
+- Advertising.csv
+- README.md
